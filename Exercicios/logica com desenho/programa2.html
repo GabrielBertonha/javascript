@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+
+    <script>   
+
+    function desenhaQuadrado(x, y, cor) {
+
+        var tela = document.querySelector('canvas'); // traz o canvas do mundo html
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor; // por ser uma variavel, nao preciso colocar entre ''
+        pincel.fillRect(x, y, 50, 50);
+        pincel.fillStroke = 'black'; // escolhe a cor da linha em volta do espaço
+        pincel.strokeRect (x, y, 50, 50); // marca onde vai ser a linha
+    }
+
+        var x = 0;
+    while (x < 600) {
+        desenhaQuadrado(x, 0, 'green');
+        x = x + 50;
+
+    }
+
+
+    </script>
+    
+</body>
+</html>

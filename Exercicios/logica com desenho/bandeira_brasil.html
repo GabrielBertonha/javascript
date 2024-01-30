@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <canvas width="600" height="500"></canvas>
+
+    <script>
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d'); // esse getcontext serve para mostrar o tipo de desenho 2d,3d ..
+
+        //fundo
+        pincel.fillStyle = 'green';
+        pincel.fillRect(0, 0, 600, 500)
+
+        //parte amarela de cima
+        pincel.fillStyle = 'yellow';
+        pincel.beginPath();
+        pincel.moveTo(300, 150);
+        pincel.lineTo(150, 250);
+        pincel.lineTo(450, 250);
+        pincel.fill();
+
+        //parte amaela de baixo
+        pincel.fillStyle = 'yellow';
+        pincel.beginPath();
+        pincel.moveTo(300, 350)
+        pincel.lineTo(150, 250)
+        pincel.lineTo(450, 250)
+        pincel.fill(); // esse comando é para preencher com a cor selecionada
+
+        //circulo
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(300, 250, 50, 0, 2 * 3.14);
+        pincel.fill();
+
+    </script>
+    
+</body>
+</html>
